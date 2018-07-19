@@ -1,0 +1,9 @@
+{% extends "../../libs/twig/_layout.html" %} {% block content %}
+
+  {% include 'hero-image/hero-image.html' with {'src': '/assets/img/vr.png', 'title': 'Future Ada', 'copy': 'A 501(c)(3) non-profit securing space for women and non-binary individuals in the science, technology, engineering, arts, and mathematics (STEAM) fields.'} %}
+  {% include 'feature-carousel/feature-carousel.html' with {'src': '/assets/img/laptop.jpg'} %}
+  {% include 'board-of-directors/board-of-directors.html' with {'src': '/assets/img/laptop.jpg'} %}
+  {% include 'future-events/future-events.html' %}
+  {% include 'footer/footer.html' %}
+
+{% endblock %}

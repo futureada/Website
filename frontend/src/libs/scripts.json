@@ -1,0 +1,5 @@
+{
+  "jquery": "./bower_components/jquery/dist/jquery.min.js",
+  "underscore": "./node_modules/underscore/underscore.js",
+  "requirejs":"./node_modules/requirejs/require.js"
+}
