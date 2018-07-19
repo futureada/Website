@@ -1,0 +1,77 @@
+@import 'variables';
+@import 'grid';
+@import 'common';
+.footer {
+	background: $darkerGrey;
+	color: $white;
+	padding-top: $gutter-medium*2;
+	.content {
+		@extend .container;
+	}
+	.info {
+		@extend .row;
+		margin-bottom: $gutter-medium*2;
+		.logo-address {
+			@extend .col-lg-8;
+			@extend .col-md-6;
+		}
+		.logo {
+			@extend .col-lg-6;
+			@extend .col-md-12;
+			padding-left: 0px;
+			img {
+				vertical-align: top;
+				position: relative;
+				top: -1.35em;
+				max-width: 200px;
+				width: 100%;
+				margin-bottom: $gutter-medium*2;
+			}
+		}
+		.address {
+			@extend .col-lg-6;
+			@extend .col-md-12;
+			margin-bottom: $gutter-medium;
+			@media (max-width: 992px) {
+				padding-left: 0px;
+			}
+		}
+
+		.details {
+			@extend .col-lg-4;
+			@extend .col-md-6;
+		}
+		.detail-title {
+			@extend h4;
+			font-size: 18px;
+			margin-bottom: 0px;
+		}
+	}
+
+	.social-legal {
+		@extend .row;
+		padding-bottom: $gutter-medium;
+		.social, .legal {
+			@extend .col-12;
+		}
+		a {
+			font-size: 1em;
+		}
+		.social a {
+			font-size: 4em;
+			margin-right: $gutter-small / 2;
+			text-decoration: none;
+		}
+	}
+	@media (max-width: 992px) {
+		.info {
+			.logo img {
+				margin-bottom: $gutter-small;
+			}
+			.logo h3 {
+				margin-bottom: $gutter-medium;
+			}
+		}
+		
+	}
+}

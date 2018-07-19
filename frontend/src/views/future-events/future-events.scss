@@ -1,0 +1,126 @@
+@import 'variables';
+@import 'common';
+.future-events {
+	@extend .container;
+	@extend %gutter-b-xl;
+	.events {
+		@extend .row;
+		text-align: center;
+		margin-top: -$gutter-large;
+	}
+
+	.event {
+		@extend .col-lg-3;
+		@extend .col-md-6;
+		@extend .col-sm-6;
+		@extend .col-12;
+		margin-top: $gutter-large;
+		text-align: center;
+		&:nth-child(3n-1), &:nth-child(3n) {
+			@extend .offset-lg-1;
+		}
+		.description {
+			position: relative;
+			height: 64px;
+			overflow: hidden;
+			z-index: 3;
+			&:before {
+				position: absolute;
+				bottom: -1px;
+				right: 12px;
+				content: "... ";
+				background: #fff;
+				box-shadow: 0px 13px 35px 17px #fff;
+				font-size: 16px;
+				font-style: italic;
+			}
+			p {
+				color: $copyColor;
+				margin-bottom: 0px;
+				background: #fff;
+			}
+			&:hover {
+				overflow: visible;
+				&:before {
+					display: none;
+				}
+				p {
+					box-shadow: 0px 0px 130px $pink;
+					border-radius: 5px;
+					padding: 3px;
+				}
+			}
+		}
+	}
+
+	.icon {
+		font-family: 'icomoon';
+		font-size: 80px;
+		color: $pink;
+		margin-bottom: $gutter-small;
+	}
+
+	.coding .icon {
+		@extend .icon-display;
+	}
+
+	.speaker .icon {
+		@extend .icon-megaphone;
+	}
+
+	.write .icon {
+		@extend .icon-pen;
+	}
+
+	.video .icon {
+		@extend .icon-tv2;
+	}
+
+	.special .icon {
+		@extend .icon-star2;
+	}
+
+	.event-title {
+		@extend h3;
+		color: $copyColor;
+		min-height: 52px;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+	}
+
+	.date {
+		@extend p; 
+		position: relative;
+		color: $pink;
+		margin: $gutter-small 0px;
+		height: auto;
+		z-index: 1;
+		&:before {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			height: 2px;
+			width: 69%;
+			transform: translate(-50%, 50%);
+			background: $pink;
+			z-index: 1;
+		}
+		span {
+			position: relative;
+			display: inline-block;
+			background: #fff;
+			width: auto;
+			padding: 0px 12px;
+			line-height: 18px;
+			z-index: 2;
+		}
+	}
+
+	.btn {
+		margin-top: $gutter-small;
+		width: 100%;
+	}
+
+}

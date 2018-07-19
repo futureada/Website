@@ -1,0 +1,72 @@
+@import 'variables';
+
+.IE .hero-image {
+	.featured-image {
+		opacity: 0.2;
+	}
+}
+
+.hero-image {
+	
+	height: 100vh;
+	display: block;
+	position: relative;
+
+	h1 {
+		margin:0;
+		color:white;
+		position: absolute;
+		top:45%;
+		left:10%;
+	}
+	p {
+		margin:0;
+		color:white;
+		position: absolute;
+		top:55%;
+		left:10%;
+		max-width: 620px;
+		letter-spacing: 0.16em;
+		line-height: 1.8em;
+	}
+	.featured-image {
+		display: block;
+		position: absolute;
+		right:10%;
+		top:0;
+		height: 100%;
+		-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+		filter: grayscale(100%);
+		mix-blend-mode: soft-light;
+	}
+	.featured-gradient {
+		display: block;
+		position: relative;
+		width:100%;
+		height:100%;
+		/* Permalink - use to edit and share this gradient: http://colorzilla.com/gradient-editor/#aa5b8b+0,5cc3c7+100 */
+		background: rgb(170,91,139); /* Old browsers */
+		background: -moz-linear-gradient(225deg, rgba(170,91,139,1), rgba(92,195,199,1)); /* FF3.6-15 */
+		background: -webkit-linear-gradient(225deg, rgba(170,91,139,1), rgba(92,195,199,1)); /* Chrome10-25,Safari5.1-6 */
+		background: linear-gradient(225deg, rgba(170,91,139,1), rgba(92,195,199,1)); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+		filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#aa5b8b', endColorstr='#5cc3c7',GradientType=1 ); /* IE6-9 */
+		animation: Gradient 8s ease-in-out infinite;
+		background-size: 200% 200%;
+	}
+}
+
+@-webkit-keyframes Gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@-moz-keyframes Gradient {
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}
+@keyframes Gradient { 
+    0%{background-position:0% 50%}
+    50%{background-position:100% 50%}
+    100%{background-position:0% 50%}
+}

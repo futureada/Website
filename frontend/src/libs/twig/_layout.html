@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="theme-color" content="#aa5b8b">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <!-- COMMON TAGS -->
+    <meta charset="utf-8">
+    <title>Future Ada | Spokane Washington 401(3)(c)</title>
+    <!-- Search Engine -->
+    <meta name="description" content="A 501(c)(3) non-profit securing space for women and non-binary individuals in the science, technology, engineering, arts, and mathematics (STEAM) fields.">
+    <meta name="image" content="http://futureada.org/assets/img/social-image.jpg">
+    <!-- Schema.org for Google -->
+    <meta itemprop="name" content="Future Ada">
+    <meta itemprop="description" content="A 501(c)(3) non-profit securing space for women and non-binary individuals in the science, technology, engineering, arts, and mathematics (STEAM) fields.">
+    <meta itemprop="image" content="http://futureada.org/assets/img/social-image.jpg">
+    <!-- Open Graph general (Facebook, Pinterest & Google+) -->
+    <meta name="og:title" content="Future Ada">
+    <meta name="og:description" content="A 501(c)(3) non-profit securing space for women and non-binary individuals in the science, technology, engineering, arts, and mathematics (STEAM) fields.">
+    <meta name="og:image" content="http://futureada.org/assets/img/social-image.jpg">
+    <meta name="og:url" content="http://futureada.org">
+    <meta name="og:site_name" content="Future Ada">
+    <meta name="og:type" content="website">
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">
+
+    <link rel="stylesheet" type="text/css" href="/css/libs.css">
+    <link rel="stylesheet" type="text/css" href="/css/layouts.css">
+    <link rel="stylesheet" type="text/css" href="/css/views.css">
+
+  </head>
+  <body>
+	{% block content %}
+
+	{% endblock %}
+
+    <script>
+        /**
+         * detect IE
+         * returns version of IE or false, if browser is not Internet Explorer
+         */
+
+        (function detectIE() {
+            var ua = window.navigator.userAgent;
+
+            var msie = ua.indexOf('MSIE ');
+            if (msie > 0) {
+                // IE 10 or older => return version number
+                var ieV = parseInt(ua.substring(msie + 5, ua.indexOf('.', msie)), 10);
+                document.querySelector('body').className += ' IE';
+            }
+
+            var trident = ua.indexOf('Trident/');
+            if (trident > 0) {
+                // IE 11 => return version number
+                var rv = ua.indexOf('rv:');
+                var ieV = parseInt(ua.substring(rv + 3, ua.indexOf('.', rv)), 10);
+                document.querySelector('body').className += ' IE';
+            }
+
+            var edge = ua.indexOf('Edge/');
+            if (edge > 0) {
+               // IE 12 (aka Edge) => return version number
+               var ieV = parseInt(ua.substring(edge + 5, ua.indexOf('.', edge)), 10);
+                document.querySelector('body').className += ' IE';
+            }
+
+            // other browser
+            return false;
+        })();
+    </script>
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-112496989-3"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'UA-112496989-3');
+    </script>
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous"></script>
+    <script src="/js/libs.js"></script>
+    <script src="/js/layouts.js"></script>
+    <script src="/js/views.js"></script>
+    <script src="/js/app.js"></script>
+  </body>
+</html>

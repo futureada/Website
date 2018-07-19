@@ -1,0 +1,92 @@
+@import 'variables';
+@import 'common';
+
+.IE .board-of-directors {
+    .profile-image {
+        opacity: 0.4;
+    }
+}
+
+
+.board-of-directors {
+    @extend .container;
+    @extend %gutter-b-xl;
+    .the-board {
+        @extend .row;
+        background: $primaryPurple;
+        padding: 8.33333%;
+        width: calc(100% + 100px);
+        margin-left: -15px - 50px;
+    }
+    .board-member {
+        @extend .col-lg-4;
+        @extend .col-sm-6;
+        padding: 4.166666%;
+        .board-member-inner {
+            position: relative;
+            display: block;
+            &:not(.no-links):hover {
+                .profile-image {
+                    transform: scale(1.2);
+                    filter: grayscale(100%) blur(3px);
+                }
+                .links {
+                    transition: .8s;
+                    opacity: 1;
+                }
+            }
+        }
+        h3, p {
+            color: white;
+        }
+        p {
+            line-height: 16px;
+        }
+        .name-title {
+            position: absolute;
+            top: -22px;
+            left: 0;
+            z-index: 10;
+        }
+        .links {
+            position: absolute;
+            left:50%;
+            top:50%;
+            transform: translate(-50%, -50%);
+            opacity: 0;
+            transition: .8s;
+            z-index: 99;
+            width:100%;
+            text-align: center;
+            a {
+                font-size: 40px;
+                text-decoration: none;
+            }
+        }
+        .profile-image-wrapper {
+            mix-blend-mode: overlay;
+            overflow: hidden;
+        }
+        .profile-image {
+            transition: 2s;
+            filter: grayscale(100%) blur(0px);
+            background-size:cover;
+            background-position: center center;
+            width:100%;   
+        }
+    }
+
+    @media(max-width:1200px) {
+        .the-board {
+            width: 100%;
+            margin-left: 0px;
+        }
+    }
+
+    @media(max-width: 575px) {
+        .board-member {
+            padding-bottom: 8.3333%;
+        }
+    }
+
+}
