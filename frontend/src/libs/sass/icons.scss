@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-medium:before {
+  content: "\e930";
+}
 .icon-twitter-square:before {
   content: "\f081";
 }

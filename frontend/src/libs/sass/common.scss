@@ -91,20 +91,24 @@ p {
   background: $pink;
   color: $white;
   padding: 16px 0px;
-  text-decoration: none;
+  text-decoration: none !important;
   border: 2px solid $pink;
   @include transition(0.2s all);
   &:hover {
-    background: $white;
-    color: $pink;
+    background: $white !important;
+    color: $pink !important;
     border: 2px solid $pink;
   }
   &.disabled {
     opacity: 0.3;
     pointer-events: none;
   }
+  &:link, &:visited {
+    color: $white;
+    text-decoration: none;
+  }
 }
-.facebook, .linkedin, .instagram, .github, .twitter {
+.facebook, .linkedin, .instagram, .github, .twitter, .medium {
     font-family: 'icomoon';
     &:hover {
       color: #508fcc;
@@ -130,6 +134,9 @@ p {
     @extend .icon-twitter-square;
 }
 
+.medium {
+    @extend .icon-medium;
+}
 
 .header-copy {
   @extend %gutter-b-xl;

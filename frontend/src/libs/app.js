@@ -29,13 +29,11 @@ require([],function(){
 
 	App.prototype.addOffsetClass = function() {
 		var $scrollTops = $('[scroll-top]');
-		console.log($scrollTops);
 		$(window).scroll(function(){
 			var scrollTop = $(window).scrollTop() + $(window).height();
 			var height = $(window).height();
 			$scrollTops.each(function(){
 				var top = $(this).offset().top;
-				console.log(scrollTop, top);
 				if(top <= scrollTop && (top + height) >= scrollTop ) {
 					$(this).addClass( 'scrolled-in' );
 				}
